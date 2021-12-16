@@ -12,8 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.post("/send-file", sendFileController.sendFile);
 app.get("/exams/types", examTypeController.getExamTypes);
 app.get('/subjects', subjectController.getSubjects);
+
 
 export async function init () {
   await connectDatabase();
