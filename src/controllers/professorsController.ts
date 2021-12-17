@@ -12,3 +12,13 @@ export async function getProfessorFromSubject(req: Request, res: Response) {
         return res.sendStatus(500);
     }
 }
+
+export async function getProfessorsFromExams(req: Request, res: Response) {
+    try {
+        const professors = await professorService.getProfessorsFromExams();
+        return res.send(professors);
+    } catch (error) {
+        console.log(error);
+        return res.sendStatus(500);
+}
+}
