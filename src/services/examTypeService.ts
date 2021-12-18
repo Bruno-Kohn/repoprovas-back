@@ -1,8 +1,8 @@
 import { getRepository } from 'typeorm';
 
-import examType from '../entities/examType';
+import ExamType from '../entities/ExamType';
 
 export async function getExamTypes() {
-    const types = await getRepository(examType).find();
+    const types = await getRepository(ExamType).find();
     return types;
 }

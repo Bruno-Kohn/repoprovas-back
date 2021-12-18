@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-
 import * as professorService from '../services/professorService';
 
 export async function getProfessorFromSubject(req: Request, res: Response) {
@@ -19,6 +18,6 @@ export async function getProfessorsFromExams(req: Request, res: Response) {
         return res.send(professors);
     } catch (error) {
         console.log(error);
-        return res.sendStatus(500);
+        return res.sendStatus(500).send('deu ruim');
 }
 }

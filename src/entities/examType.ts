@@ -1,1 +1,0 @@
-// criar a entity de examType
