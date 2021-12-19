@@ -23,7 +23,7 @@ export default class Exam {
   @Column()
   exam_type_id: number;
     
-  @ManyToOne(() => Professor, (professor) => professor.exams)
+  @ManyToOne(() => Professor, (professor) => professor.exams, { eager: true })
   @JoinColumn({name: 'professor_id'})
   professor: Professor;  
 

@@ -10,7 +10,7 @@ export default class Professor {
   @Column()
   name: string;
 
-  @OneToMany(() => Exam, (exams) => exams.professor, {eager: true})
+  @OneToMany(() => Exam, (exams) => exams.professor)
   exams: Exam[];
 
   @OneToMany(() => SubjectProfessor, (subjects_professors) => subjects_professors.professor_id)

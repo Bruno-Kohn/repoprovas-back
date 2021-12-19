@@ -16,7 +16,9 @@ export async function checkSubject(subject_id: number) {
 export async function getProfessorsFromExams() {
     const query = getRepository(Professor);
 
-    const professors = await query.find();
+    const professors = await query.find({
+        relations: ['exams']
+    });
 
     return professors;
 }
