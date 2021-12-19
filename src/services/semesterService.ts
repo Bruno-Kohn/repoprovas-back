@@ -8,11 +8,9 @@ export async function getSemesterFromSubjects() {
     const semester = query.find({
         relations: [
             "subject",
-            "subject.exams",
-            "subject.exams.professor"
+            "subject.exams"
         ]
     });
 
-    const rel = await query.find({ relations: ["subject"] });
-    return rel;
+    return semester;
 }

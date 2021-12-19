@@ -18,7 +18,7 @@ export default class Subject {
   @JoinColumn({name: 'semester_id'})
   semester: Semester;
 
-  @OneToMany(() => Exam, exams => exams.subject, { eager: true })
+  @OneToMany(() => Exam, exams => exams.subject)
   exams: Exam[];
 
   @OneToMany(() => SubjectProfessor, subjects_professors => subjects_professors.subject)
