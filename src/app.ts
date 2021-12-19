@@ -16,8 +16,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post("/exams", examController.postExam); 
-app.get("/exams/types", examTypeController.getExamTypes); 
+app.post('/exams', examController.postExam); 
+app.get('/exams/types', examTypeController.getExamTypes); 
 app.get('/subjects', subjectController.getSubjects); 
 app.get('/subjects/:id/professors', professorsController.getProfessorFromSubject); 
 app.get('/professors/exams', professorsController.getProfessorsFromExams); 
