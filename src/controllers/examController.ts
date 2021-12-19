@@ -15,7 +15,7 @@ export async function postExam(req: Request, res: Response) {
         const { name, link, exam_type_id, professor_id, subject_id } = req.body as postExamInterface;
 
         examService.postExamFunc({ name, link, exam_type_id, professor_id, subject_id });
-        return res.sendStatus(201).send('Exam sent successfully');
+        return res.status(201).send('Exam sent successfully');
     } catch (error) {
         console.log(error);
         return res.sendStatus(500);
