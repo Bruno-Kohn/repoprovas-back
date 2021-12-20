@@ -17,8 +17,8 @@ export default class Exam {
   @Column()
   professor_id: number;
 
-  @Column({name: 'subject_id'})
-  subjectId: number;
+  @Column()
+  subject_id: number;
 
   @Column()
   exam_type_id: number;

@@ -1,12 +1,12 @@
 import { getRepository } from "typeorm";
-import Exam from '../entities/ExamType';
+import Exam from '../entities/Exam';
 
 interface FilesInterface {
     name: string;
     link: string;    
-    professor_id: number;
-    subject_id: number;
     exam_type_id: number;
+    professor_id: number;
+    subject_id: number; 
 }
 
 export async function postExamFunc(params: FilesInterface) {
